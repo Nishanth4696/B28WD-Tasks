@@ -1,0 +1,47 @@
+const getBlogs = () => {
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET","https://restcountries.com/v3.1/all");
+    xhr.responseType="json";
+
+    xhr.onload=() => {
+        const blogs = xhr.response;
+
+//Get all the countries from Asia continent /region using Filter function
+        
+        const filterAsia = blogs.filter((asia) => asia.continents =="Asia");
+
+        console.log(filterAsia)
+
+
+
+//Get all the countries with a population of less than 2 lakhs using Filter function
+        const populationAll = blogs.filter((total) => total.population <= 200000);
+
+        console.log(populationAll)
+
+// Print the following details name, capital, flag using forEach function
+
+        blogs.forEach(blog => {
+            console.log("Name:",blog.name.common,"||", "  Capital:",blog.capital[0],"||", "  Flag:",blog.flag)
+        });
+
+//Print the total population of countries using reduce function
+            const Totalpopulation = blogs.map((mv) => mv.population)
+            const result = Totalpopulation.reduce((curr, sum) => sum + curr);
+            console.log("Total population: ",result)
+
+//Print the country which uses US Dollars as currency.
+           
+            for(let blog of blogs){
+               if(blog.currencies.USD){
+                   console.log(blog)
+               }
+           }
+
+        
+    }
+    xhr.send();
+}
+
+ 
+getBlogs()
