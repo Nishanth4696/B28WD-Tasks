@@ -1,0 +1,71 @@
+.github{
+  display: flex;
+  color: white;
+  height: 75px;
+  width: 100%;
+  font-size: 35px;
+  align-content: flex-start;
+  justify-content: space-around;
+  align-items: center;
+ 
+}
+
+.github-1{
+  color: black;
+  background: black;
+  height: 461px;
+  width: 200px;
+  margin: 48px;
+  border-radius: 20px;
+  float: left;
+  display: flex;
+  
+}
+
+.github-2{
+  display: flex;
+    color: black;
+    background: black;
+    height: 134px;
+    width: 128px;
+    float: right;
+    border-radius: 20px;
+    
+
+}
+.github-3{
+  color: white;
+    background-color: black;
+    height: 36px;
+    width: 450px;
+    float: unset;
+    margin-left: auto;
+    font-size: 26px;
+    margin-top: 51px;
+    border-radius: 10px;
+    
+}
+
+.github-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.github-5{
+  color: black;
+    background: black;
+    height: 200px;
+    width: 461px;
+    margin: -4px;
+    margin-top: -252px;
+    border-radius: 20px;
+    float: right;
+    display: flex;
+   
+}
+
+.fa{
+  display: flex;
+  float: left;
+}
