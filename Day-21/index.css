@@ -1,0 +1,11 @@
+body{
+    margin: 21%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 118%;
+}
+
+.msg{
+    color: blue;
+}
