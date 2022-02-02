@@ -1,0 +1,134 @@
+.dog-container{
+    background-color: grey;
+    margin: 2rem;
+   
+    margin-left: 3rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    gap: 1rem;
+    transition: all 0.5s;
+    align-items: center;
+    width: 250px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 350px;
+    
+
+   
+}
+.edit-dog-form{
+    display: none;
+}
+
+.dog-list{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.access_button{
+    
+    display: inline;
+    flex-direction: column;
+}
+
+button{
+    background-color: white;
+}
+
+button:hover{
+    background-color: gray;
+}
+
+.dog-avatar{
+    display: inline-flex;
+    
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    margin-top: 1rem;
+}
+
+.dog-name{
+    font-size: 1.4rem;
+    font-family: sans-serif;
+}
+
+.dog-container:hover{
+    transform: scale(1.05);
+    opacity: 1;
+    background-color: crimson;
+}
+
+.dog-container:hover .dog-name{
+    color: white;
+    
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+
+@media (min-width:615px){
+    .dog-list{
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+@media (min-width:800px){
+    .dog-list{
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
+
+}
+
+
+@media (min-width:1000px){
+    .dog-list{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+}
+
+
+
