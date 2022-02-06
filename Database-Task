@@ -14,7 +14,7 @@ INSERT INTO Users VALUES (004, 'Maran', 'B28WD','24-jun-2021');
 INSERT INTO Users VALUES (005, 'Suresh', 'B28WD','24-jun-2021');
 
 -- fetch 
-SELECT * FROM Users;
+-- SELECT * FROM Users;
 
 
 -- create
@@ -33,7 +33,7 @@ INSERT INTO Codekata VALUES (0004, 'Maran', 'B28WD',55);
 INSERT INTO Codekata VALUES (0005, 'Suresh', 'B28WD',58);
 
 -- fetch 
-SELECT * FROM Codekata;
+-- SELECT * FROM Codekata;
 
 
 
@@ -53,7 +53,7 @@ INSERT INTO Attendance VALUES (0004, 'Maran', 'B28WD',86);
 INSERT INTO Attendance VALUES (0005, 'Suresh', 'B28WD',80);
 
 -- fetch 
-SELECT * FROM Attendance;
+-- SELECT * FROM Attendance;
 
 
 
@@ -68,10 +68,10 @@ INSERT INTO Topics VALUES (1, 'FullStack');
 INSERT INTO Topics VALUES (2, 'Python');
 INSERT INTO Topics VALUES (3, 'AWS');
 INSERT INTO Topics VALUES (4, 'CloudComputing');
-INSERT INTO Topics VALUES (3, 'NodeJS');
+INSERT INTO Topics VALUES (5, 'NodeJS');
 
 -- fetch 
-SELECT * FROM Topics;
+-- SELECT * FROM Topics;
 
 
 
@@ -92,7 +92,7 @@ INSERT INTO Tasks VALUES (0004, 'Maran', 'B28WD',13,17);
 INSERT INTO Tasks VALUES (0005, 'Suresh', 'B28WD',12,18);
 
 -- fetch 
-SELECT * FROM Tasks;
+-- SELECT * FROM Tasks;
 
 
 
@@ -112,7 +112,8 @@ INSERT INTO Company_Drives VALUES (0004, 'Maran', 'B28WD',12);
 INSERT INTO Company_Drives VALUES (0005, 'Suresh', 'B28WD',15);
 
 -- fetch 
-SELECT * FROM Company_Drives;
+-- SELECT * FROM Company_Drives;
+
 
 
 
@@ -131,7 +132,7 @@ INSERT INTO Mentors VALUES (0004, 'Maran', 10);
 INSERT INTO Mentors VALUES (0005, 'Suresh', 10);
 
 -- fetch 
-SELECT * FROM Mentors;
+-- SELECT mentorname,student_assigned FROM Mentors;
 
 
 
@@ -139,18 +140,19 @@ SELECT * FROM Mentors;
 CREATE TABLE students_activated_courses (
   userId INTEGER PRIMARY KEY,
   username TEXT NOT NULL,
+  CoursesId INTEGER NOT NULL,
   student_activated INTEGER NOT NULL
 );
 
 -- insert
-INSERT INTO students_activated_courses VALUES (0001, 'Clark', 40);
-INSERT INTO students_activated_courses VALUES (0002, 'Dave', 50);
-INSERT INTO students_activated_courses VALUES (0003, 'Ava', 48);
-INSERT INTO students_activated_courses VALUES (0004, 'Maran', 45);
-INSERT INTO students_activated_courses VALUES (0005, 'Suresh', 52);
+INSERT INTO students_activated_courses VALUES (0001, 'Clark',0001, 40);
+INSERT INTO students_activated_courses VALUES (0002, 'Dave',0002, 50);
+INSERT INTO students_activated_courses VALUES (0003, 'Ava',0003, 48);
+INSERT INTO students_activated_courses VALUES (0004, 'Maran',0004, 45);
+INSERT INTO students_activated_courses VALUES (0005, 'Suresh',0005, 52);
 
 -- fetch 
-SELECT * FROM students_activated_courses;
+-- SELECT * FROM students_activated_courses;
 
 
 
@@ -169,4 +171,15 @@ INSERT INTO Courses VALUES (0004, 'Maran', 15);
 INSERT INTO Courses VALUES (0005, 'Suresh', 17);
 
 -- fetch 
-SELECT * FROM Courses;
+-- SELECT * FROM Courses;
+
+-- SELECT * from students_activated_courses left join Courses on CoursesId = CourseId;
+
+
+-- statements:
+
+-- 1. SELECT userId, username,no_of_problem_solved FROM Codekata;
+-- 2. SELECT userId,username, no_of_companies FROM Company_Drives;
+-- 3.SELECT * from students_activated_courses left join Courses on CoursesId = CourseId;
+-- 4.SELECT mentorId,mentorname FROM Mentors;
+-- 5.SELECT mentorname,student_assigned FROM Mentors;
