@@ -1,0 +1,172 @@
+-- create
+CREATE TABLE Users (
+  userId INTEGER PRIMARY KEY,
+  username TEXT NOT NULL,
+  batch TEXT NOT NULL,
+  DOJ TEXT NOT NULL
+);
+
+-- insert
+INSERT INTO Users VALUES (001, 'Clark', 'B28WD','24-jun-2021');
+INSERT INTO Users VALUES (002, 'Dave', 'B28WD','24-jun-2021');
+INSERT INTO Users VALUES (003, 'Ava', 'B28WD','24-jun-2021');
+INSERT INTO Users VALUES (004, 'Maran', 'B28WD','24-jun-2021');
+INSERT INTO Users VALUES (005, 'Suresh', 'B28WD','24-jun-2021');
+
+-- fetch 
+SELECT * FROM Users;
+
+
+-- create
+CREATE TABLE Codekata (
+  userId INTEGER PRIMARY KEY,
+  username TEXT NOT NULL,
+  batch TEXT NOT NULL,
+  no_of_problem_solved INTEGER NOT NULL
+);
+
+-- insert
+INSERT INTO Codekata VALUES (0001, 'Clark', 'B28WD',45);
+INSERT INTO Codekata VALUES (0002, 'Dave', 'B28WD',50);
+INSERT INTO Codekata VALUES (0003, 'Ava', 'B28WD',60);
+INSERT INTO Codekata VALUES (0004, 'Maran', 'B28WD',55);
+INSERT INTO Codekata VALUES (0005, 'Suresh', 'B28WD',58);
+
+-- fetch 
+SELECT * FROM Codekata;
+
+
+
+-- create
+CREATE TABLE Attendance (
+  userId INTEGER PRIMARY KEY,
+  username TEXT NOT NULL,
+  batch TEXT NOT NULL,
+  attendance INTEGER NOT NULL
+);
+
+-- insert
+INSERT INTO Attendance VALUES (0001, 'Clark', 'B28WD',80);
+INSERT INTO Attendance VALUES (0002, 'Dave', 'B28WD',75);
+INSERT INTO Attendance VALUES (0003, 'Ava', 'B28WD',88);
+INSERT INTO Attendance VALUES (0004, 'Maran', 'B28WD',86);
+INSERT INTO Attendance VALUES (0005, 'Suresh', 'B28WD',80);
+
+-- fetch 
+SELECT * FROM Attendance;
+
+
+
+-- create
+CREATE TABLE Topics (
+  courseId INTEGER PRIMARY KEY,
+  coursename TEXT NOT NULL
+);
+
+-- insert
+INSERT INTO Topics VALUES (1, 'FullStack');
+INSERT INTO Topics VALUES (2, 'Python');
+INSERT INTO Topics VALUES (3, 'AWS');
+INSERT INTO Topics VALUES (4, 'CloudComputing');
+INSERT INTO Topics VALUES (3, 'NodeJS');
+
+-- fetch 
+SELECT * FROM Topics;
+
+
+
+-- create
+CREATE TABLE Tasks (
+  userId INTEGER PRIMARY KEY,
+  username TEXT NOT NULL,
+  batch TEXT NOT NULL,
+  task_pending INTEGER NOT NULL,
+  completed INTEGER NOT NULL
+);
+
+-- insert
+INSERT INTO Tasks VALUES (0001, 'Clark', 'B28WD',15,15);
+INSERT INTO Tasks VALUES (0002, 'Dave', 'B28WD',16,14);
+INSERT INTO Tasks VALUES (0003, 'Ava', 'B28WD',9,21);
+INSERT INTO Tasks VALUES (0004, 'Maran', 'B28WD',13,17);
+INSERT INTO Tasks VALUES (0005, 'Suresh', 'B28WD',12,18);
+
+-- fetch 
+SELECT * FROM Tasks;
+
+
+
+-- create
+CREATE TABLE Company_Drives (
+  userId INTEGER PRIMARY KEY,
+  username TEXT NOT NULL,
+  batch TEXT NOT NULL,
+  no_of_companies INTEGER NOT NULL
+);
+
+-- insert
+INSERT INTO Company_Drives VALUES (0001, 'Clark', 'B28WD',15);
+INSERT INTO Company_Drives VALUES (0002, 'Dave', 'B28WD',18);
+INSERT INTO Company_Drives VALUES (0003, 'Ava', 'B28WD',16);
+INSERT INTO Company_Drives VALUES (0004, 'Maran', 'B28WD',12);
+INSERT INTO Company_Drives VALUES (0005, 'Suresh', 'B28WD',15);
+
+-- fetch 
+SELECT * FROM Company_Drives;
+
+
+
+-- create
+CREATE TABLE Mentors (
+  mentorId INTEGER PRIMARY KEY,
+  mentorname TEXT NOT NULL,
+  student_assigned INTEGER NOT NULL
+);
+
+-- insert
+INSERT INTO Mentors VALUES (0001, 'Clark', 10);
+INSERT INTO Mentors VALUES (0002, 'Dave', 10);
+INSERT INTO Mentors VALUES (0003, 'Ava', 10);
+INSERT INTO Mentors VALUES (0004, 'Maran', 10);
+INSERT INTO Mentors VALUES (0005, 'Suresh', 10);
+
+-- fetch 
+SELECT * FROM Mentors;
+
+
+
+-- create
+CREATE TABLE students_activated_courses (
+  userId INTEGER PRIMARY KEY,
+  username TEXT NOT NULL,
+  student_activated INTEGER NOT NULL
+);
+
+-- insert
+INSERT INTO students_activated_courses VALUES (0001, 'Clark', 40);
+INSERT INTO students_activated_courses VALUES (0002, 'Dave', 50);
+INSERT INTO students_activated_courses VALUES (0003, 'Ava', 48);
+INSERT INTO students_activated_courses VALUES (0004, 'Maran', 45);
+INSERT INTO students_activated_courses VALUES (0005, 'Suresh', 52);
+
+-- fetch 
+SELECT * FROM students_activated_courses;
+
+
+
+-- create
+CREATE TABLE Courses (
+  CourseId INTEGER PRIMARY KEY,
+  coursename TEXT NOT NULL,
+  no_of_users INTEGER NOT NULL
+);
+
+-- insert
+INSERT INTO Courses VALUES (0001, 'Clark', 20);
+INSERT INTO Courses VALUES (0002, 'Dave', 22);
+INSERT INTO Courses VALUES (0003, 'Ava', 19);
+INSERT INTO Courses VALUES (0004, 'Maran', 15);
+INSERT INTO Courses VALUES (0005, 'Suresh', 17);
+
+-- fetch 
+SELECT * FROM Courses;
